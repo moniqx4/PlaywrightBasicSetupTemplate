@@ -1,13 +1,19 @@
 # Playwright Basic Setup Template
 
-This is a Basic Setup Templete for a Playwright Node version using Typescript Project.
+This is a Basic Setup Templete for a Playwright Node version using Typescript Project. Also included the MCP configuration for Playwright and a robust agent requirements doc for testing in the docs folder.
+
 Playwright is a test automation tool for developing tests. [Playwright.dev](https://www.playwright.dev) for official docs
 
-This template does has the following:
+This template has the following:
 
 - package.json setup with basic items, and necessary packages for this project
 - tsconfig.json - preconfigured with base necessary items
 - project structure - basic folder structure created. NOTE: this project is created from root of folder, versus creating a 'src' folder and moving all project files there, and non-project files outside of that. Its not necessary to have a src, but if you prefer it, feel free to change it.
+- ai, mcp.json for playwright
+- eslint configuration
+- basic fixture setup
+
+Above the most basic install, included those items that are typically used in enterprise level application projects, but could also be used for a basic getting started project as well.
 
 ## Step By Step Instructions
 
@@ -70,4 +76,40 @@ To check every thing is working, in the example.spec.ts, click the green run pla
 3. Pushing our code to Github:
 
 Now that we have confirmed our base setup is working, we will create and push repository to github:
+These are the bare git commands, but highly recommend Github Desktop, its much easier to work with, and less likely to check in something not expecting: 
 
+create a new repository: 
+
+``` git remote add <name> <url> ```
+
+add files to your repository:
+
+``` git add filename1 ```
+
+push the files to your repository
+``` git push -u origin <name> ```
+
+4. Add tsconfig and configuring
+
+I have added an already configured tsconfig.json file in this repository. Its configured with the basic settings. You'll also notice I have entered some paths, these are folders that you will need to create and by configuring them here, when importing we can use the configured alias, instead of using the actual path for each file. Allows for our imported files to be less verbose and easier to find. These settings are for configuring Typescript for our project.
+
+5. Installing other packages
+Below are a list of files to install, with the commandlines to do so. If you do not have Typescript installed globally, I recommend you do. However, you can also install it just for this project as I have done, to ensure its available for whomever installs this templates.
+
+- typescript
+- dotenv - this manages our environmental variables
+- eslint - a popular linting project, to check for code format, and syntax and needed for playwright plug options to be available
+- eslint-plugin-playwright - special rules that can be configured specifically for playwright, i have included the commons in the esling.config.js, but can change these as needed
+
+``` npm i typescript dotenv eslint eslint-plugin-playwright -D ```
+or if yarn:
+``` yarn add typescript dotenv eslint eslint-plugin-playwright -D ```
+
+after this is run, in the package.json should see the added packages there in the devDependencies section.
+
+6. Added scripts to package.json
+In the package.json, it has some added scripts for running tests, checking files format ( lint ), etc. This contains common ones, can add others as needed.
+
+7. .envSetup - I have created a .envSetup, that in order for it to work,  you will need to rename this to be just .env. The .env is configured to be ignored and not checked to github, because typically you would have api keys, things you don't want to be public, this being a template, nothing of value in it. But have to call it something else, because github will bug me if I don't.
+
+8. mcp.json - I have included the playwright mcp server information, if interested in setting up got usage with AI. It gives the LLM access to the playwright tools to run tests, create and edit them, basically all the playwright commands. If leveraging agentic agents, in the docs folder it has an agent markdown file that can be used, add or change the information with your own preferences.
