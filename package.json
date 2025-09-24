@@ -2,9 +2,20 @@
   "name": "playwright-basic-setup-template",
   "packageManager": "yarn@3.2.3",
   "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "lint": "eslint . --ext .ts",
+    "codegen": "playwright codegen",
+    "show-report": "playwright show-report"
+  },
   "devDependencies": {
     "@playwright/test": "^1.55.1",
-    "@types/node": "^24.5.2"
-  },
-  "scripts": {}
+    "@types/node": "^24.5.2",
+    "dotenv": "^17.2.2",
+    "eslint": "^9.36.0",
+    "eslint-plugin-playwright": "^2.2.2",
+    "typescript": "^5.9.2"
+  }
 }
