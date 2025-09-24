@@ -17,13 +17,13 @@
 		"skipLibCheck": true,
 		"noEmitOnError": true,
 		"noImplicitAny": false,		
-		"outDir": "./tests-artifacts",
+		"outDir": "./tests-out",
 		"rootDir": ".",
 		"baseUrl": ".",
 		"paths": {
 			"@pages/*": ["pages/*"],	
 			"@fixtures/*": ["fixtures/*"],
-			"@configuration/*": ["config/*"],
+			"@configuration/*": ["configuration/*"],
 			"@utils/*": ["utils/*"], 
 			"@sharedtypes/*": ["shared-types/*"],
 			"@constants/*": ["constants/*"]

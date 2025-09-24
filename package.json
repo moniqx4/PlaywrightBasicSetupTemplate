@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "playwright test",
+    "pretest": "tsc --incremenetal -p tests/tsconfig.json",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "lint": "eslint . --ext .ts",
