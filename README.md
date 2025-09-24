@@ -12,6 +12,7 @@ This template has the following:
 - ai, mcp.json for playwright
 - eslint configuration
 - basic fixture setup
+- Dockerfile - basic setup for Dockerfile to run Playwright in a Docker container using the Microsoft Playwright image
 
 Above the most basic install, included those items that are typically used in enterprise level application projects, but could also be used for a basic getting started project as well.
 
