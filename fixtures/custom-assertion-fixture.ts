@@ -1,6 +1,6 @@
 import { APIResponse, expect as baseExpect, Locator } from "@playwright/test"
-import { APIUtils } from "@utils/APIUtils"
 import { ZodType } from "zod"
+import { APIUtils } from "@utils/APIUtils"
 
 
 export type CustomAssertionFixture = {
