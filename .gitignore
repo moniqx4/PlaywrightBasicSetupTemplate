@@ -22,3 +22,4 @@ node_modules/
 .yarnrc.yml
 yarn.lock
 .env
+.vscode/settings.json
