@@ -139,3 +139,23 @@ const userPagePermissions2: PagesPermissionsMap = {
 
 export { pages, roles, adminPagePermissions, userPagePermissions }
 
+interface IUser {
+  id: number
+  name: string
+  email: string
+  role: 'admin' | 'editor' | 'viewer'
+}
+
+interface ITestCreation {
+  title: string
+  description: string
+  steps: string[]
+  expectedResults: string[]
+  priority: 'Low' | 'Medium' | 'High'
+  tags?: string[]
+  authUser?: IUser
+  userUnderTest?: IUser
+  url?: string
+  dependencies?: any[] // api calls, or something else
+}
+
