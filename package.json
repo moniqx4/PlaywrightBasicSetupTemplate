@@ -12,6 +12,7 @@
     "show-report": "playwright show-report"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.11.1",
     "@playwright/test": "^1.58.2",
     "playwright-cli": "^0.262.0"
   },
